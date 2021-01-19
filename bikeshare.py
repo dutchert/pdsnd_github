@@ -29,7 +29,7 @@ def get_filters():
     
     cityname = ''
     while cityname.lower() not in CITY_DATA:
-        cityname = input('Can you please provide me a city name to analyze data? Your options are chicago, new york city or washington)\n')
+        cityname = input('Will you please provide me a city name to analyze data? Your options are chicago, new york city or washington)\n')
         if cityname.lower() in CITY_DATA:
             city = CITY_DATA[cityname.lower()]
         else:
