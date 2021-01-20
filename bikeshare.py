@@ -29,11 +29,11 @@ def get_filters():
     
     cityname = ''
     while cityname.lower() not in CITY_DATA:
-        cityname = input('Can you please provide me a city name to analyze data? Your options are chicago, new york city or washington)\n')
+        cityname = input('Will you please provide me a city name to analyze data? Your options are chicago, new york city or washington)\n')
         if cityname.lower() in CITY_DATA:
             city = CITY_DATA[cityname.lower()]
         else:
-            print("I'm sorry I was not able to get the name of the city to analyze data. Please try again.\n")
+            print("So sorry I was not able to process the name of the city to analyze data. Can you please try again?\n")
          
     # TO DO: get user input for month (all, january, february, ... , june)
     
@@ -43,7 +43,7 @@ def get_filters():
         if monthname.lower() in MONTHS_DATA:
             month = monthname.lower()
         else:
-            print("I'm sorry I was not able to get the name of the month to analyze data. Please try again.\n")
+            print("So sorry I was not able to process the name of the month to analyze data. Can you please try again?\n")
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     
     dayname = ''
@@ -52,7 +52,7 @@ def get_filters():
         if dayname.lower() in DAYS_DATA:
             day = dayname.lower()
         else:
-            print("I'm sorry I was not able to get the name of the day to analyze data. Please try again.\n")
+            print("So sorry I was not able to process the name of the day to analyze data. Can you please try again?\n")
 
     print('-'*40)
     return city, month, day
@@ -229,13 +229,13 @@ def main():
         trip_duration_stats(df)
         user_stats(df, city)
         while True:
-            view_raw_data = input('\nWould you like to view first five row of raw data? Enter yes or no.\n')
+            view_raw_data = input('\nWould you like to view first five row of raw data? Please enter yes or no.\n')
             if view_raw_data.lower() != 'yes':
                 break
             display_raw_data(df)
             break
 
-        restart = input('\nWould you like to restart? Enter yes or no.\n')
+        restart = input('\nWould you like to restart? Please enter yes or no.\n')
         if restart.lower() != 'yes':
             break
 
